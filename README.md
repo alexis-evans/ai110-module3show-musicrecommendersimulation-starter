@@ -29,6 +29,68 @@ Some prompts to answer:
 
 You can include a simple diagram or bullet list if helpful.
 
+From what I can tell about real world recommendation-systems, there are two core approaches: content-based filtering and collaborative filtering. Content-based filtering recommends items that are similar to what you've already liked, and collaborative filtering recommends items that are similar to people who consume the same content you do. My system will prioritize a content-based filtering approach, because there are no other users to compare to. The features of each `Song` that my system will use will be: genre, mood, energy, valence, danceability, and acousticness. For now, my `UserProfile` will store favorite_genre, favorite_mood, target_energy, target_acousticness, target_valence, and target_danceability. These may be changed based on how the recommender does.
+
+How the Recommender recommends songs:
+1. `main.py` runs, loads songs intoa list of dictionaries if csv file exists, otherwise, returns an empty list.
+2. Define user_prefs: Dict(name genre, songs, k=5)
+3. For each song: score the song (user_prefs vs song attributes)
+  * genre match
+  * mood match
+  * energy delta
+  * acousticness delta
+  * valence delta
+  * danceability delta
+4. Aggregate score
+5. Build explanation
+
+The recommender will use a Gaussian (bell-curve) proximity function that is centered on the user's preferred value. I chose to use a Gaussian bell curve over linear because it rewards being close more than being somewhat close, and it doesn't linearily punish mid-range misses.
+
+For the categorical attributes (favorite genre and mood), favorite genre has the rule that an exact match will be weighted as 1.0, a partial match (indie pop contains pop) is a 0.5, and no match is 0.0. For mood, an exact match returns a weight of 1.0, and no match returns 0.0.
+
+Each feature contributes to the final score through a weighted sum. The weights reflect how much each feature should influence the recommendation:
+
+| Feature | Weight | Reason |
+|---|---|---|
+| Genre | 0.30 | Genre is the strongest filter — a mismatch is often a deal-breaker |
+| Mood | 0.25 | Mood captures current emotional intent but is slightly more flexible than genre |
+| Energy | 0.20 | Energy drives how a song feels, and the user provides an explicit target |
+| Valence | 0.10 | Correlated with mood, but song-specific enough to matter |
+| Danceability | 0.10 | Important for context (studying vs. working out), but secondary |
+| Acousticness | 0.05 | More of a texture preference; lowest confidence in the user's signal |
+
+The final score for a song is:
+
+```
+score = 0.30 × genre_match + 0.25 × mood_match + 0.20 × proximity(energy) + 0.10 × proximity(valence) + 0.10 × proximity(danceability) + 0.05 × proximity(acousticness)
+```
+
+All scores fall between 0.0 and 1.0. Songs are then sorted by score descending, and the top k are returned as recommendations.
+
+1. Genre gatekeeping (the one you named)
+Genre carries the highest weight (0.30) and uses hard string matching. A jazz song with a perfect mood, energy, and vibe match scores at most 0.70 against a user who prefers pop — it's penalized before the music itself is even evaluated. Great cross-genre discoveries get buried.
+
+2. Partial match asymmetry
+"indie pop" partially matches "pop" (scores 0.5), but "pop" does not partially match "indie pop". The direction of the substring check matters. A user who lists favorite_genre = "indie pop" will never get partial credit for a plain "pop" song, even though those genres heavily overlap.
+
+3. Mood is all-or-nothing
+Mood has no partial match — "relaxed" and "chill" score 0 against each other despite being semantically similar. A song that's clearly in the same emotional neighborhood gets no credit. The categorical boundary is arbitrary relative to how moods actually feel.
+
+4. Catalog bias toward whatever moods are in the CSV
+If the catalog only has "happy", "chill", and "intense", users who set favorite_mood = "melancholic" will never get a mood match. The system silently degrades for users whose preferences aren't well-represented in the data.
+
+5. Gaussian σ is one-size-fits-all
+The tolerance (σ = 0.15) is fixed for all numerical features. But a user might be very picky about energy (narrow preference) but totally flexible about acousticness. A single σ treats all features as equally tolerant, which misrepresents real preferences.
+
+6. Weight assumptions don't generalize
+The weights (genre 0.30, mood 0.25, etc.) were designed with a general listener in mind. A user who listens exclusively by energy level (e.g., workout playlists) is poorly served — energy is structurally limited to 0.20 no matter what.
+
+7. Acousticness underweighted for acoustic listeners
+target_acousticness carries only 0.05 weight. A user who deeply cares about acoustic vs. electric texture — a folk purist, for example — will get recommendations that ignore their strongest preference.
+
+8. No diversity enforcement
+The ranking rule is pure score-descending. If three lofi songs all score similarly high, a user gets three lofi songs. No mechanism prevents the top-k from being near-identical tracks from the same niche.
+
 ---
 
 ## Getting Started
