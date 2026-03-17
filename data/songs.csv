@@ -1,51 +1,51 @@
-id,title,artist,genre,mood,energy,tempo_bpm,valence,danceability,acousticness
-1,Sunrise City,Neon Echo,pop,happy,0.82,118,0.84,0.79,0.18
-2,Midnight Coding,LoRoom,lofi,chill,0.42,78,0.56,0.62,0.71
-3,Storm Runner,Voltline,rock,intense,0.91,152,0.48,0.66,0.10
-4,Library Rain,Paper Lanterns,lofi,chill,0.35,72,0.60,0.58,0.86
-5,Gym Hero,Max Pulse,pop,intense,0.93,132,0.77,0.88,0.05
-6,Spacewalk Thoughts,Orbit Bloom,ambient,chill,0.28,60,0.65,0.41,0.92
-7,Coffee Shop Stories,Slow Stereo,jazz,relaxed,0.37,90,0.71,0.54,0.89
-8,Night Drive Loop,Neon Echo,synthwave,moody,0.75,110,0.49,0.73,0.22
-9,Focus Flow,LoRoom,lofi,focused,0.40,80,0.59,0.60,0.78
-10,Rooftop Lights,Indigo Parade,indie pop,happy,0.76,124,0.81,0.82,0.35
-11,HUMBLE.,Kendrick Lamar,hip-hop,intense,0.78,150,0.42,0.76,0.04
-12,Velvet Fog,Drifting Palms,R&B,romantic,0.52,88,0.73,0.69,0.44
-13,Ring of Fire,Johnny Cash,country,intense,0.71,138,0.65,0.75,0.82
-14,Moonlight Sonata,Ludwig van Beethoven,classical,melancholy,0.31,56,0.22,0.18,0.98
-15,Shatter the Crown,Crimson Static,metal,angry,0.97,180,0.21,0.32,0.06
-16,Porch Blues,Sunken Archive,blues,sad,0.38,74,0.29,0.44,0.88
-17,Soft Landing,Drifting Palms,soul,romantic,0.55,94,0.79,0.65,0.52
-18,Concrete Rush,Prism Drop,drum and bass,anxious,0.96,174,0.38,0.84,0.02
-19,Ultraviolet Floor,Prism Drop,house,euphoric,0.88,126,0.89,0.92,0.05
-20,Hollow Roads,The Hollow Coast,folk,melancholy,0.29,68,0.33,0.48,0.91
-21,Three Little Birds,Bob Marley,reggae,happy,0.54,100,0.88,0.77,0.74
-22,Love Story,Taylor Swift,country pop,happy,0.72,118,0.87,0.83,0.57
-23,Torn Asphalt,Basalt & Bone,punk,angry,0.93,176,0.35,0.71,0.08
-24,Neon Casanova,Velvet Crater,indie rock,nostalgic,0.68,116,0.62,0.74,0.28
-25,Cafe de Bossa,Marigold Theory,bossa nova,relaxed,0.34,84,0.74,0.58,0.87
-26,Grid Protocol,Prism Drop,techno,focused,0.84,138,0.41,0.78,0.03
-27,Ghost Frequency,Velvet Crater,hip-hop,moody,0.71,88,0.44,0.72,0.18
-28,Creep,Radiohead,alternative rock,melancholy,0.52,92,0.29,0.45,0.44
-29,Dust on the Porch,The Hollow Coast,country,nostalgic,0.47,96,0.68,0.62,0.79
-30,Atlas Burning,Crimson Static,metal,intense,0.95,186,0.28,0.38,0.04
-31,Bottom of the Bottle,Sunken Archive,blues,sad,0.44,78,0.25,0.41,0.85
-32,Soul Fire,Drifting Palms,soul,euphoric,0.77,112,0.88,0.85,0.31
-33,Clockwork Panic,Basalt & Bone,punk,anxious,0.91,168,0.32,0.68,0.07
-34,Wildflower Drive,The Hollow Coast,country,happy,0.65,128,0.85,0.80,0.72
-35,Paper Crane,Marigold Theory,bossa nova,peaceful,0.27,76,0.78,0.55,0.92
-36,Fade to Static,Velvet Crater,indie rock,melancholy,0.49,104,0.36,0.55,0.38
-37,Winter Tape,LoRoom,lofi,nostalgic,0.38,74,0.52,0.56,0.82
-38,Late Night Dispatch,Slow Stereo,jazz,moody,0.43,94,0.48,0.57,0.76
-39,Sundrop Horizon,Orbit Bloom,ambient,dreamy,0.22,55,0.72,0.36,0.95
-40,CROWN,Velvet Crater,hip-hop,triumphant,0.85,96,0.82,0.81,0.12
-41,Neon Nostalgia,Neon Echo,synthwave,nostalgic,0.70,106,0.67,0.78,0.25
-42,Saltwater,Paper Lanterns,lofi,peaceful,0.31,70,0.63,0.55,0.88
-43,Gravity Waltz,Indigo Parade,indie pop,dreamy,0.62,112,0.75,0.79,0.42
-44,Broken Compass,Sunken Archive,blues,angry,0.63,98,0.24,0.47,0.77
-45,Voltage,Max Pulse,electronic,euphoric,0.92,140,0.83,0.91,0.04
-46,High Desert Wind,The Hollow Coast,folk,peaceful,0.24,64,0.69,0.44,0.94
-47,Mirror Stage,Basalt & Bone,indie rock,moody,0.61,108,0.41,0.65,0.33
-48,Soft Distortion,Voltline,rock,nostalgic,0.67,114,0.55,0.68,0.29
-49,Dreamloop,Prism Drop,electronic,dreamy,0.58,102,0.71,0.74,0.18
-50,Crimson Tide,Drifting Palms,R&B,sad,0.46,84,0.31,0.52,0.61
+id,title,artist,genre,mood,energy,tempo_bpm,valence,danceability,acousticness,popularity,release_decade,mood_tags
+1,Sunrise City,Neon Echo,pop,happy,0.82,118,0.84,0.79,0.18,72,2020,"uplifting,danceable,bright"
+2,Midnight Coding,LoRoom,lofi,chill,0.42,78,0.56,0.62,0.71,58,2020,"focused,calm,dreamy"
+3,Storm Runner,Voltline,rock,intense,0.91,152,0.48,0.66,0.10,65,1970,"powerful,aggressive,driving"
+4,Library Rain,Paper Lanterns,lofi,chill,0.35,72,0.60,0.58,0.86,61,2020,"calm,peaceful,focused"
+5,Gym Hero,Max Pulse,pop,intense,0.93,132,0.77,0.88,0.05,80,2020,"energetic,motivating,powerful"
+6,Spacewalk Thoughts,Orbit Bloom,ambient,chill,0.28,60,0.65,0.41,0.92,45,2020,"dreamy,ethereal,calm"
+7,Coffee Shop Stories,Slow Stereo,jazz,relaxed,0.37,90,0.71,0.54,0.89,52,2010,"nostalgic,warm,peaceful"
+8,Night Drive Loop,Neon Echo,synthwave,moody,0.75,110,0.49,0.73,0.22,69,2020,"nostalgic,atmospheric,driving"
+9,Focus Flow,LoRoom,lofi,focused,0.40,80,0.59,0.60,0.78,55,2020,"focused,calm,productive"
+10,Rooftop Lights,Indigo Parade,indie pop,happy,0.76,124,0.81,0.82,0.35,73,2020,"uplifting,bright,romantic"
+11,HUMBLE.,Kendrick Lamar,hip-hop,intense,0.78,150,0.42,0.76,0.04,95,2010,"aggressive,triumphant,powerful"
+12,Velvet Fog,Drifting Palms,R&B,romantic,0.52,88,0.73,0.69,0.44,63,2020,"romantic,sensual,warm"
+13,Ring of Fire,Johnny Cash,country,intense,0.71,138,0.65,0.75,0.82,88,1960,"passionate,dramatic,nostalgic"
+14,Moonlight Sonata,Ludwig van Beethoven,classical,melancholy,0.31,56,0.22,0.18,0.98,82,1800,"melancholy,introspective,peaceful"
+15,Shatter the Crown,Crimson Static,metal,angry,0.97,180,0.21,0.32,0.06,71,2010,"aggressive,intense,angry"
+16,Porch Blues,Sunken Archive,blues,sad,0.38,74,0.29,0.44,0.88,48,2000,"melancholy,sorrowful,nostalgic"
+17,Soft Landing,Drifting Palms,soul,romantic,0.55,94,0.79,0.65,0.52,66,2020,"romantic,warm,uplifting"
+18,Concrete Rush,Prism Drop,drum and bass,anxious,0.96,174,0.38,0.84,0.02,74,2020,"energetic,aggressive,driving"
+19,Ultraviolet Floor,Prism Drop,house,euphoric,0.88,126,0.89,0.92,0.05,85,2020,"euphoric,danceable,energetic"
+20,Hollow Roads,The Hollow Coast,folk,melancholy,0.29,68,0.33,0.48,0.91,42,2010,"melancholy,introspective,nostalgic"
+21,Three Little Birds,Bob Marley,reggae,happy,0.54,100,0.88,0.77,0.74,79,1970,"uplifting,peaceful,happy"
+22,Love Story,Taylor Swift,country pop,happy,0.72,118,0.87,0.83,0.57,91,2000,"romantic,nostalgic,uplifting"
+23,Torn Asphalt,Basalt & Bone,punk,angry,0.93,176,0.35,0.71,0.08,68,2010,"aggressive,angry,driving"
+24,Neon Casanova,Velvet Crater,indie rock,nostalgic,0.68,116,0.62,0.74,0.28,62,2020,"nostalgic,romantic,bittersweet"
+25,Cafe de Bossa,Marigold Theory,bossa nova,relaxed,0.34,84,0.74,0.58,0.87,57,1960,"relaxed,warm,peaceful"
+26,Grid Protocol,Prism Drop,techno,focused,0.84,138,0.41,0.78,0.03,76,2020,"focused,energetic,driving"
+27,Ghost Frequency,Velvet Crater,hip-hop,moody,0.71,88,0.44,0.72,0.18,70,2010,"moody,atmospheric,introspective"
+28,Creep,Radiohead,alternative rock,melancholy,0.52,92,0.29,0.45,0.44,89,1990,"melancholy,introspective,vulnerable"
+29,Dust on the Porch,The Hollow Coast,country,nostalgic,0.47,96,0.68,0.62,0.79,59,2010,"nostalgic,peaceful,warm"
+30,Atlas Burning,Crimson Static,metal,intense,0.95,186,0.28,0.38,0.04,78,2020,"aggressive,intense,powerful"
+31,Bottom of the Bottle,Sunken Archive,blues,sad,0.44,78,0.25,0.41,0.85,44,2010,"melancholy,sorrowful,introspective"
+32,Soul Fire,Drifting Palms,soul,euphoric,0.77,112,0.88,0.85,0.31,77,2020,"euphoric,uplifting,danceable"
+33,Clockwork Panic,Basalt & Bone,punk,anxious,0.91,168,0.32,0.68,0.07,65,2010,"anxious,aggressive,driving"
+34,Wildflower Drive,The Hollow Coast,country,happy,0.65,128,0.85,0.80,0.72,68,2020,"happy,uplifting,nostalgic"
+35,Paper Crane,Marigold Theory,bossa nova,peaceful,0.27,76,0.78,0.55,0.92,53,1960,"peaceful,calm,gentle"
+36,Fade to Static,Velvet Crater,indie rock,melancholy,0.49,104,0.36,0.55,0.38,60,2010,"melancholy,introspective,atmospheric"
+37,Winter Tape,LoRoom,lofi,nostalgic,0.38,74,0.52,0.56,0.82,62,2020,"nostalgic,calm,dreamy"
+38,Late Night Dispatch,Slow Stereo,jazz,moody,0.43,94,0.48,0.57,0.76,49,2010,"moody,atmospheric,nocturnal"
+39,Sundrop Horizon,Orbit Bloom,ambient,dreamy,0.22,55,0.72,0.36,0.95,41,2020,"dreamy,ethereal,peaceful"
+40,CROWN,Velvet Crater,hip-hop,triumphant,0.85,96,0.82,0.81,0.12,83,2020,"triumphant,powerful,euphoric"
+41,Neon Nostalgia,Neon Echo,synthwave,nostalgic,0.70,106,0.67,0.78,0.25,71,2020,"nostalgic,atmospheric,euphoric"
+42,Saltwater,Paper Lanterns,lofi,peaceful,0.31,70,0.63,0.55,0.88,57,2020,"peaceful,calm,dreamy"
+43,Gravity Waltz,Indigo Parade,indie pop,dreamy,0.62,112,0.75,0.79,0.42,69,2020,"dreamy,romantic,uplifting"
+44,Broken Compass,Sunken Archive,blues,angry,0.63,98,0.24,0.47,0.77,51,2000,"angry,sorrowful,melancholy"
+45,Voltage,Max Pulse,electronic,euphoric,0.92,140,0.83,0.91,0.04,87,2020,"euphoric,energetic,danceable"
+46,High Desert Wind,The Hollow Coast,folk,peaceful,0.24,64,0.69,0.44,0.94,44,2010,"peaceful,introspective,nostalgic"
+47,Mirror Stage,Basalt & Bone,indie rock,moody,0.61,108,0.41,0.65,0.33,63,2010,"moody,introspective,atmospheric"
+48,Soft Distortion,Voltline,rock,nostalgic,0.67,114,0.55,0.68,0.29,66,1980,"nostalgic,driving,powerful"
+49,Dreamloop,Prism Drop,electronic,dreamy,0.58,102,0.71,0.74,0.18,72,2020,"dreamy,ethereal,focused"
+50,Crimson Tide,Drifting Palms,R&B,sad,0.46,84,0.31,0.52,0.61,55,2020,"melancholy,sorrowful,romantic"

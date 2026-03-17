@@ -67,7 +67,9 @@ score = 0.30 × genre_match + 0.25 × mood_match + 0.20 × proximity(energy) + 0
 
 All scores fall between 0.0 and 1.0. Songs are then sorted by score descending, and the top k are returned as recommendations.
 
-1. Genre gatekeeping (the one you named)
+Some biases:
+
+1. Genre gatekeeping
 Genre carries the highest weight (0.30) and uses hard string matching. A jazz song with a perfect mood, energy, and vibe match scores at most 0.70 against a user who prefers pop — it's penalized before the music itself is even evaluated. Great cross-genre discoveries get buried.
 
 2. Partial match asymmetry
@@ -248,7 +250,6 @@ Examples:
 - You wrote tests for your scoring logic
 
 You do not need a numeric metric, but if you used one, explain what it measures.
-
 ---
 
 ## 8. Future Work
