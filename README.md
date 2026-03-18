@@ -145,6 +145,10 @@ Use this section to document the experiments you ran. For example:
 - What happened when you added tempo or valence to the score
 - How did your system behave for different types of users
 
+1. I tested what a user with contradicting desires (i.e. high energy, but mood calm). The system prioritized mood over energy because it's weighted heavier, so the songs were lower on the scores, but mostly matched the mood.
+2. I tested adding tempo to the score, but it didn't do much because the songs that had more subdued moods already had lower tempos and vice versa.
+3. I tested making mood more important than genre, but the songs that it recommended were mostly the same, so it didn't do much.
+
 ---
 
 ## Limitations and Risks
@@ -159,6 +163,9 @@ Examples:
 
 You will go deeper on this in your model card.
 
+1. There are only some songs in the catalog, and they all must be manually assesed for every feature. This makes it hard to add new songs automatically.
+2. Similar moods do not affect the system. It only looks for direct matches and has no way of knowing that too moods are basically synonyms of each other, so the weights for certain songs are off.
+
 ---
 
 ## Reflection
@@ -172,6 +179,9 @@ Write 1 to 2 paragraphs here about what you learned:
 - about how recommenders turn data into predictions
 - about where bias or unfairness could show up in systems like this
 
+In this project, I learned that recommenders turn data into predictions by comparing user preferences to song attributes using math. Each feature, like energy or mood, gets assigned a weight based on how important it is, and those weighted differences produce a score. The higher the score, the better the match. This showed me that the system is only as good as the features you pick and how much weight you give them. Small choices, like doubling the weight of mood, can change results in unexpected ways.
+
+I also learned that bias can sneak into a system through the data and the design. My dataset had more pop and lofi songs than other genres, which means users with those preferences get better results than users with niche tastes. The mood matching was also unfair in a hidden way: two songs that feel very similar, like "chill" and "relaxed," got treated as completely different, which hurt scores for users who liked those moods. This taught me that bias does not always look obvious, and sometimes it is built into how categories are defined or what data was collected in the first place.
 
 ---
 
