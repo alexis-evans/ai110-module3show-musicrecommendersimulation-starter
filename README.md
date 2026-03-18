@@ -1,5 +1,12 @@
 # 🎵 Music Recommender Simulation
 
+## Screenshots
+<img width="1140" height="1187" alt="Music Recommender Screenshot 1" src="https://github.com/user-attachments/assets/05a23a31-0764-4af8-a2af-bcb4f4951a2c" />
+
+<img width="1112" height="524" alt="Music Recommender Screenshot 2" src="https://github.com/user-attachments/assets/424c11e5-63d7-4e29-aaf0-7f074a5e6405" />
+
+
+
 ## Project Summary
 
 In this project you will build and explain a small music recommender system.
